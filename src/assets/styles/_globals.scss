@@ -1,0 +1,54 @@
+// src/assets/styles/_globals.scss
+
+// Reset some basic elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif; // Bootstrap's default font
+  line-height: 1.6;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Link styles
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Button styles
+.btn-custom {
+  background-color: $accent-color;
+  color: $light-color;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}
+
+// Card styles
+.card {
+  border: 1px solid $neutral-gray;
+  border-radius: 0.5rem;
+
+  .card-header {
+    background-color: $secondary-color;
+    color: $dark-shade;
+  }
+
+  .card-body {
+    background-color: $light-color;
+    color: $text-color;
+  }
+}
