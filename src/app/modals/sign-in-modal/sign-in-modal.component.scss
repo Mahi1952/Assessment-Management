@@ -1,0 +1,48 @@
+@import "../../../styles.scss";
+
+.modal-content {
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  .btn-primary {
+    background-color: $accent-color;
+    border: none;
+    padding: 0.4rem;
+    &:hover {
+      background-color: $highlight-color;
+    }
+  }
+
+  // Adjusting padding for larger content space
+  padding: 2rem; // Increase padding inside the modal
+}
+
+.modal-body {
+  position: relative;
+  overflow: hidden;
+}
+
+.logger {
+  color: $complementary-color;
+
+  a {
+    color: $highlight-color;
+  }
+}
+
+// Center the modal dialog vertically and horizontally
+.modal-dialog {
+  margin: auto; // Centers the modal
+
+  // Adjust the size of the modal
+  max-width: 600px; // You can set this to whatever width you prefer
+  width: 90%; // Make it responsive
+}
+
+.modal-dialog-centered {
+  display: flex; // Enables flex for centering
+  align-items: center; // Centers vertically
+  min-height: calc(
+    100vh - 1rem
+  ); // Ensures the modal does not exceed viewport height
+}

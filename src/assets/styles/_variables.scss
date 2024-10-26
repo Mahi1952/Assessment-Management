@@ -14,3 +14,4 @@ $muted-text-color: #6c757d; // Muted text color
 
 // Background Colors
 $background-color: $light-color; // Default background color
+$hover-color: lighten($primary-color, 10%);

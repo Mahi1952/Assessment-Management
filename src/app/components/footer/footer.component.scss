@@ -1,0 +1,44 @@
+// src/app/footer/footer.component.scss
+
+@import "../../../styles.scss"; // Adjust the path based on where your global styles are located
+
+.footer {
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 20px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 40px;
+
+    a {
+      color: $text-color;
+      transition: transform 0.2s;
+
+      &:hover {
+        color: $hover-color; // Change color on hover
+        transform: scale(1.1);
+      }
+    }
+  }
+}

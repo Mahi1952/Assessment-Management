@@ -1,0 +1,36 @@
+// src/app/app.component.scss or similar layout file
+
+html,
+body {
+  height: 100%; // Full height for body
+  margin: 0; // Remove default margin
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column; // Stack children vertically
+  min-height: calc(100vh - 100px); // Adjust for header and footer heights
+  padding: 20px; // Add some padding if necessary
+  box-sizing: border-box; // Include padding in height calculations
+}
+
+app-header {
+  height: 50px; // Set height for header
+}
+
+app-footer {
+  height: 50px; // Set height for footer
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Make sure the container takes the full height of the viewport
+
+  // Your other components
+  flex-grow: 1; // Allow this component to grow and take available space
+
+  footer {
+    margin-top: auto; // Push the footer to the bottom
+  }
+}

@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import "../../../styles.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 10px 30px; // Adjusted padding for smaller screens
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-color; // Using $primary-color with transparency
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; // Maintain max-width for better alignment
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: $accent-color; // Bright accent color
+    text-decoration: none;
+
+    .logo-text {
+      font-size: 1.8em;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+      margin: 0 15px; // Spacing between links
+      color: $light-color; // White color for links
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $accent-color; // Change text color on hover
+      }
+    }
+
+    .btn-login {
+      height: 40px;
+      padding: 0 15px;
+      margin-left: 20px;
+      border: none;
+      border-radius: 5px;
+      background: transparent;
+      color: $light-color; // White color for button
+      border: 2px solid $accent-color; // Bright accent border
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $accent-color; // Bright accent background
+        color: $light-color;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    .navigation {
+      flex-direction: column; // Stack vertically when collapsed
+      align-items: stretch; // Use full width
+      position: absolute;
+      top: 60px; // Adjust according to your navbar height
+      left: 0;
+      right: 0;
+      background: $primary-color; // Use the same background color
+      padding: 10px 0; // Add padding
+      display: none; // Hide by default
+      text-align: center; // Center text in links
+
+      &.show {
+        display: flex; // Show when toggled
+      }
+
+      .nav-link {
+        margin: 10px 0; // Vertical spacing
+        width: 100%; // Full width for clickable area
+      }
+
+      .btn-login {
+        width: 100%; // Full width for button
+        margin-top: 10px; // Space above the button
+      }
+    }
+
+    // Hamburger icon styles
+    .navbar-toggler {
+      border: none; // Remove border
+
+      .navbar-toggler-icon {
+        background-color: $secondary-color; // Change hamburger color
+      }
+    }
+  }
+}
